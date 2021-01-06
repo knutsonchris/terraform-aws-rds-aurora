@@ -280,6 +280,12 @@ variable "iam_database_authentication_enabled" {
   default     = false
 }
 
+variable "iam_partition" {
+  description = "IAM Partition to use when generating ARN's. For most regions this can be left at default. China/Govcloud use different partitions"
+  type        = string
+  default     = "aws"
+}
+
 variable "enabled_cloudwatch_logs_exports" {
   description = "List of log types to export to cloudwatch"
   type        = list(string)
